@@ -57,6 +57,7 @@ Displays smart responses, alerts, and info boxes
 FinBuddy maintains chat context throughout user interactions by utilizing LangChain's RunnableWithMessageHistory to enable session-aware conversations. It uses a lightweight message history system to automatically store and retrieve previous messages, and it keeps track of each user's unique session_id. This enables the chatbot to recall past questions and answers, allowing for follow-up inquiries, logical conversation, and tailored financial advice based on the current exchange — all without requiring users to repeatedly enter their information.
 
 **Functions Used in FinBuddy:**
+
 1.future_value(principal, rate, years)
 Calculates the future value of a one-time investment over a period at a given annual return rate.
 
