@@ -57,25 +57,25 @@ Displays smart responses, alerts, and info boxes
 FinBuddy maintains chat context throughout user interactions by utilizing LangChain's RunnableWithMessageHistory to enable session-aware conversations. It uses a lightweight message history system to automatically store and retrieve previous messages, and it keeps track of each user's unique session_id. This enables the chatbot to recall past questions and answers, allowing for follow-up inquiries, logical conversation, and tailored financial advice based on the current exchange — all without requiring users to repeatedly enter their information.
 
 **Functions Used in FinBuddy:**
-future_value(principal, rate, years)
+1.future_value(principal, rate, years)
 Calculates the future value of a one-time investment over a period at a given annual return rate.
 
-present_value(future_value, rate, years)
+2.present_value(future_value, rate, years)
 Computes how much a future amount is worth today, adjusted for inflation or return.
 
-fv_annuity(payment, rate, years)
+3.fv_annuity(payment, rate, years)
 Estimates the future value of regular monthly savings (annuity) over a number of years.
 
-pv_annuity(payment, rate, years)
+4.pv_annuity(payment, rate, years)
 Calculates the present value of a series of monthly payments.
 
-nper(rate, payment, present_value, future_value)
+5.nper(rate, payment, present_value, future_value)
 Determines how many months/years are needed to reach a financial goal given savings and returns.
 
-ruleof_72(rate)
+6.ruleof_72(rate)
 Estimates how many years it will take to double your investment at a given interest rate.
 
-required_month_savings(future_value_target, current_savings, rate, years)
+7.required_month_savings(future_value_target, current_savings, rate, years)
 Computes the monthly savings required to reach a target future amount, factoring in existing savings and returns.
 
 
