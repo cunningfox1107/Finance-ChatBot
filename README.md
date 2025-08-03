@@ -4,8 +4,9 @@
 Personalized Query Handling: Responds to user-specific questions like “When can I retire?”, “Will my savings last until I’m 80?”, or “How much do I need to save monthly to reach ₹50 lakhs?”.
 Smart Financial Calculations: Uses industry-standard formulas for future value, present value, annuities, NPER, and the Rule of 72 to provide accurate insights tailored to your profile.
 Conversational AI: Powered by OpenAI’s GPT model via LangChain, it retains memory across sessions to maintain context during conversations.
-Income Gap Recommendations: If you’re not on track to meet your financial goals, FinBuddy can analyze the shortfall and suggest side hustles or alternative income sources to close the gap.
-Formula Explanations: Curious how a value was calculated? Just ask — FinBuddy will explain the formulas and logic used behind the scenes.
+
+**Income Gap Recommendations: If you’re not on track to meet your financial goals, FinBuddy can analyze the shortfall and suggest side hustles or alternative income sources to close the gap.
+Formula Explanations: Curious how a value was calculated? Just ask — FinBuddy will explain the formulas and logic used behind the scenes.**
 
 **Key Features**
 Conversational interface via Streamlit
@@ -15,14 +16,15 @@ Interactive response rendering with history.
 Extendable with more tools, APIs, and modulesUser Journey / Interaction Flow.
 
 **Workflow of the Application**
-1. Launch the App	User opens the app via Streamlit (app.py) which renders a dark-themed UI.
+1. Launch the App	User opens the app via Streamlit (app.py).
 2. Enter Financial Details	A form captures personal info like age, income, savings, expenses, target nest egg, and expected return. This data is stored in the session.
 3. View Profile Summary	The sidebar displays a real-time summary of the user’s financial profile (via the Persona class).
 4. Ask Financial Questions	Users can enter natural-language queries (e.g., “When can I retire?”, “How much should I save?”)
 5. AI Processes the user's financial dataand the query is sent to the LangChain-powered agent that calls the OpenAI model to reason and respond.
 6. Intelligent Responses	The chatbot uses memory to maintain context and responds with personalized financial advice.
-7. Gap Analysis & Side Hustles	If there’s a shortfall in reaching a target goal, the bot calculates how much more the user needs to save and suggests side hustles to bridge the gap.
-8. Explain the Math, If asked, FinBuddy explains the exact financial formulas used behind its suggestions.
+7. **Gap Analysis & Side Hustles** :If there’s a shortfall in reaching a target goal, the bot calculates how much more the user needs to save and suggests side hustles to bridge the gap.
+   
+9. Explain the Math, If asked, FinBuddy explains the exact financial formulas used behind its suggestions.
 
 **Technical Architecture & Components**
 a) **personabuilder.py** – User Profile Manager
@@ -31,7 +33,9 @@ Name, age, income, expenses, Savings, return expectations, and goals
 
 b) **formulaengine.py** – Financial Calculator Engine
 Contains reusable functions that model standard financial concepts.
+
 **Function	Description**
+
 **future_value()**:FV of current savings over time
 **fv_annuity()**: FV of monthly savings
 **nper()**: Time required to reach a goal
