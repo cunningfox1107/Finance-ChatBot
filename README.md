@@ -26,34 +26,39 @@ Extendable with more tools, APIs, and modulesUser Journey / Interaction Flow.
    
 9. Explain the Math, If asked, FinBuddy explains the exact financial formulas used behind its suggestions.
 
-**Technical Architecture & Components**
-a) **personabuilder.py** – User Profile Manager
+**Technical Architecture & Components**  
+
+**a)personabuilder.py** – User Profile Manager
 Defines a Persona class to store and update:
 Name, age, income, expenses, Savings, return expectations, and goals
 
-b) **formulaengine.py** – Financial Calculator Engine
+**b)formulaengine.py** – Financial Calculator Engine
 Contains reusable functions that model standard financial concepts.
 
-**Function	Description**
+**c)Function	Description**
 
-**future_value()**:FV of current savings over time
-**fv_annuity()**: FV of monthly savings
-**nper()**: Time required to reach a goal
-**ruleof_72()**: Time to double investment
-**required_month_savings()** :Monthly amount needed to meet a future goal
+    1. future_value()**:FV of current savings over time  
 
-c) **agent.py** – LangChain Agent & Memory Handler
+    2. fv_annuity()**: FV of monthly savings  
+
+    3. nper()**: Time required to reach a goal  
+
+    4. ruleof_72()**: Time to double investment  
+
+    5. required_month_savings()** :Monthly amount needed to meet a future goal
+
+**c)agent.py** – LangChain Agent & Memory Handler
 Agent Creation: Sets up a LangChain agent with tools and an OpenAI LLM.
 Session Memory: Uses session-specific history so the bot remembers the ongoing conversation.
 Tool Invocation: The agent can call formula functions or calculators if needed.
 
-d) **app.py** – Streamlit Frontend
+**d)app.py** – Streamlit Frontend
 Renders the full UI (form, chatbot, sidebar, suggestions)
 Stores session states (persona, agent_chain, etc.)
 Captures user input and submits it to the agent
 Displays smart responses, alerts, and info boxes
 
-5. **State & Memory Management**
+**5.State & Memory Management**
 FinBuddy maintains chat context throughout user interactions by utilizing LangChain's RunnableWithMessageHistory to enable session-aware conversations. It uses a lightweight message history system to automatically store and retrieve previous messages, and it keeps track of each user's unique session_id. This enables the chatbot to recall past questions and answers, allowing for follow-up inquiries, logical conversation, and tailored financial advice based on the current exchange — all without requiring users to repeatedly enter their information.
 
 **Functions Used in FinBuddy:**
