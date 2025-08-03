@@ -1,7 +1,7 @@
 # Finance-ChatBot
 
 **Features of this Chatbot**
-Personalized Query Handling: Responds to user-specific questions like “When can I retire?”, “Will my savings last until I’m 80?”, or “How much do I need to save monthly to reach ₹50 lakhs?”.
+Personalized Query Handling: Responds to user-specific questions like “When can I retire?”, **“Will my savings last until I’m 80?”**, or **“How much do I need to save monthly to reach ₹50 lakhs?”.**
 Smart Financial Calculations: Uses industry-standard formulas for future value, present value, annuities, NPER, and the Rule of 72 to provide accurate insights tailored to your profile.
 Conversational AI: Powered by OpenAI’s GPT model via LangChain, it retains memory across sessions to maintain context during conversations.
 
@@ -24,7 +24,7 @@ Extendable with more tools, APIs, and modulesUser Journey / Interaction Flow.
 6. Intelligent Responses	The chatbot uses memory to maintain context and responds with personalized financial advice.
 7. **Gap Analysis & Side Hustles** :If there’s a shortfall in reaching a target goal, the bot calculates how much more the user needs to save and suggests side hustles to bridge the gap.
    
-9. Explain the Math, If asked, FinBuddy explains the exact financial formulas used behind its suggestions.
+8. Explain the Math, If asked, FinBuddy explains the exact financial formulas used behind its suggestions.
 
 **Technical Architecture & Components**  
 
@@ -35,17 +35,17 @@ Name, age, income, expenses, Savings, return expectations, and goals
 **b)formulaengine.py** – Financial Calculator Engine
 Contains reusable functions that model standard financial concepts.
 
-**c)Function	Description**
+**Function Description**
 
-    1. future_value()**:FV of current savings over time  
+    1. future_value():FV of current savings over time  
 
-    2. fv_annuity()**: FV of monthly savings  
+    2. fv_annuity(): FV of monthly savings  
 
-    3. nper()**: Time required to reach a goal  
+    3. nper(): Time required to reach a goal  
 
-    4. ruleof_72()**: Time to double investment  
+    4. ruleof_72(): Time to double investment  
 
-    5. required_month_savings()** :Monthly amount needed to meet a future goal
+    5. required_month_savings() :Monthly amount needed to meet a future goal
 
 **c)agent.py** – LangChain Agent & Memory Handler
 Agent Creation: Sets up a LangChain agent with tools and an OpenAI LLM.
